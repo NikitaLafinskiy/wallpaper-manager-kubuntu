@@ -45,7 +45,7 @@ func walk(path string, d fs.DirEntry, err error) error {
 
 	if !d.IsDir() {
 		src := loadImage(path)
-		g := gift.New(gift.Colorize(263, 30, 70))
+		g := gift.New(gift.Colorize(263, 30, 55))
 		dst := image.NewNRGBA(g.Bounds(src.Bounds()))
 		g.Draw(dst, src)
 

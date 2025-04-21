@@ -26,8 +26,8 @@ func ChangeWallpaper() {
 	}
 
 	// Find the current day of the month and the dir to choose
-	day := time.Now().Day()
-	currDir := files[day % len(files)]
+	hour := time.Now().Hour()
+	currDir := files[hour % len(files)]
 
 	// Select a random vertical and horizontal image out of that dir
 	dirName := currDir.Name()
